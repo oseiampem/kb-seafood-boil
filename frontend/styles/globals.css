@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ember text-white font-body;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ::selection {
+    @apply bg-fire-600 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-ember;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-fire-700 rounded-full;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-fire-gradient text-white font-semibold px-8 py-3 rounded-full
+           hover:opacity-90 active:scale-95 transition-all duration-200
+           shadow-lg shadow-fire-900/50;
+  }
+
+  .btn-outline {
+    @apply border-2 border-fire-500 text-fire-400 font-semibold px-8 py-3 rounded-full
+           hover:bg-fire-500 hover:text-white active:scale-95 transition-all duration-200;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-display font-bold text-white;
+  }
+
+  .section-subtitle {
+    @apply text-fire-400 uppercase tracking-widest text-sm font-semibold mb-3;
+  }
+
+  .card {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl
+           hover:border-fire-500/50 transition-all duration-300;
+  }
+
+  .status-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  }
+}
