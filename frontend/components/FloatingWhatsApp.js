@@ -39,7 +39,7 @@ export default function FloatingWhatsApp() {
 
       {/* Pulse ring */}
       <motion.div
-        className="absolute bottom-0 right-0 w-14 h-14 rounded-full bg-green-400"
+        className="absolute bottom-0 right-0 w-14 h-14 rounded-full bg-green-400 pointe-events-none"
         animate={{ scale: [1, 1.5, 1.5], opacity: [0.5, 0, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: 'easeOut' }}
       />
